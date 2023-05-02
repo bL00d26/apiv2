@@ -16,7 +16,7 @@ functions:
     events:
       - httpApi: 
           method: GET 
-          path: /
+          path: /test/{id}
     layers:
       - { Ref: OrdersLambdaLayer }
   post-route:
