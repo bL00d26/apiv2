@@ -23,6 +23,6 @@ export class OrderProviderTypeInterceptor implements NestInterceptor {
   private getProviderType(xtoken: string): string {
     //lógica para determinar según el token el tipo de proveedor
     console.log(xtoken);
-    return 'TRINITIP';
+    return xtoken;
   }
 }
