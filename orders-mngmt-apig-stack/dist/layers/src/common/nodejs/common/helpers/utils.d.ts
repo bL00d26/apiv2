@@ -1,0 +1,40 @@
+import { HttpException } from '@nestjs/common';
+import { OrderLine } from '../interfaces';
+import { Item as FreedompayItem } from '../interfaces/Freedompay/Item.interface';
+export declare const generateRandomString: (length: number) => string;
+export declare const toObjectId: (id: string) => any;
+export declare const patchSubDocumentMongo: (key: string, obj: any) => {};
+export declare const isObjectId: (id: string) => boolean;
+export declare const isEmail: (emailAdress: any) => boolean;
+export declare const isNcrID: (ncrId: any) => boolean;
+export declare const isFullName: (fullName: any) => boolean;
+export declare function buildQueryParams(queryParams: any): string;
+export declare function normalizeText(text: string): string;
+export declare const generateUUID: () => any;
+export declare const generateMaskedNumberFromLast4: (last4: string) => string;
+export declare const removeCommasfromAmount: (amount: number) => number;
+export declare const getLatestVersionFromSpecificApp: (appTagName: string) => string;
+export declare const validateTypeFileFromMimeType: (validFileTypes: string[], fileType: string) => boolean;
+export declare const validateCertificateFile: (validFileTypes: string[], file: any) => void;
+export declare const validateDtoInstance: (instance: any, plainValue: any) => Promise<HttpException>;
+export declare const validateDto: (instance: any, plainValue: any) => Promise<unknown[]>;
+export declare const generateDueDateForInvoice: (pickupDate: string, isDev: boolean) => number;
+export declare const prepareTransactionParams: (TableName: string, AppInstallationID: string) => {
+    TableName: string;
+    Key: {
+        AppInstallationID: string;
+    };
+    ConsistentRead: boolean;
+};
+export declare const findCredentials: (AppInstallation: any, ApiKey: string) => any;
+export declare const generateTestConnection: (url: string, env: string) => string;
+export declare const capitalizeFirstLetter: (string: any) => any;
+export declare const getAppVersion: (tagName: string) => string;
+export declare function hashPurchaserCode(email: string | undefined): string;
+export declare function buildFreedompayItems(items: OrderLine[]): FreedompayItem[] | [];
+export declare function getTimeDiffsForPayments(newDate: string, previousDate: string): {
+    diffInHours: number;
+    diffInDays: number;
+    newDateMilis: number;
+    diffInDaysFromToday: number;
+};

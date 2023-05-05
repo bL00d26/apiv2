@@ -1,7 +1,0 @@
-services:
-  layers:
-    path: layers
-
-  orders-mgngmt-api-g:
-    path: orders-mngmt-apig-stack
-    dependsOn: layers
